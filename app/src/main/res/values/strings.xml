@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name" translatable="false">EstoqueLegal</string>
+    <string name="title_activity_home" translatable="false">HomeActivity</string>
+    <string name="email_required" translatable="false">Email is required</string>
+    <string name="password_required" translatable="false">Password is required</string>
+    <string name="logo">Logo</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="login_success">Login success</string>
+    <string name="signout">Sign out</string>
+    <string name="signout_confirmation">Log out of the account?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="create_new_user">Create new user</string>
+</resources>

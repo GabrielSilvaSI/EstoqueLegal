@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_inversePrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu" />
+
+    <Button
+        android:id="@+id/buttonProducts_Home"
+        android:layout_width="250dp"
+        android:layout_height="64dp"
+        android:text="Products"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_inventory_24"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSuppliers_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/buttonSuppliers_Home"
+        android:layout_width="250dp"
+        android:layout_height="64dp"
+        android:text="Suppliers"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_delivery_dining_24"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClients_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProducts_Home" />
+
+    <Button
+        android:id="@+id/buttonClients_Home"
+        android:layout_width="250dp"
+        android:layout_height="64dp"
+        android:text="Clients"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_room_service_24"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonProductTypes_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSuppliers_Home" />
+
+    <Button
+        android:id="@+id/buttonProductTypes_Home"
+        android:layout_width="250dp"
+        android:layout_height="64dp"
+        android:text="Product types"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_label_24"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUsers_Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClients_Home" />
+
+    <Button
+        android:id="@+id/buttonUsers_Home"
+        android:layout_width="250dp"
+        android:layout_height="64dp"
+        android:text="Users"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:icon="@drawable/baseline_business_center_24"
+        app:iconSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProductTypes_Home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
