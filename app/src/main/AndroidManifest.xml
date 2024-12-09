@@ -17,6 +17,9 @@
         android:theme="@style/Theme.EstoqueLegal"
         tools:targetApi="31">
         <activity
+            android:name=".TypesActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreateUserActivity"
             android:exported="false" />
         <activity
