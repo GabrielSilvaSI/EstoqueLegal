@@ -3,30 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/labelTypeName"
+        android:id="@+id/labelId_suprow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="[NAME]"
+        android:text="[ID]"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/labelCreation"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/labelname_suprow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/labelCreation"
+        android:id="@+id/labelname_suprow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="[CREATION]"
+        android:text="[NAME]"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@+id/labelTypeName"
+        app:layout_constraintEnd_toStartOf="@+id/labelphone_suprow"
+        app:layout_constraintStart_toEndOf="@+id/labelId_suprow"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/labelphone_suprow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="[PHONE]"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelname_suprow"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

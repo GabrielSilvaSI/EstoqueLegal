@@ -5,55 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/labelId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_weight="1"
+        android:text="[ID]"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/switchStatus"
+        app:layout_constraintEnd_toStartOf="@+id/labelName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/labelId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="[ID]"
-            android:textAlignment="center" />
+    <TextView
+        android:id="@+id/labelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="[NAME]"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/switchStatus"
+        app:layout_constraintEnd_toStartOf="@+id/labelEmail"
+        app:layout_constraintStart_toEndOf="@+id/labelId"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/labelName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="[NAME]"
-            android:textAlignment="center" />
+    <TextView
+        android:id="@+id/labelEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="[EMAIL]"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/switchStatus"
+        app:layout_constraintEnd_toStartOf="@+id/labelPhone"
+        app:layout_constraintStart_toEndOf="@+id/labelName"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/labelEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="[EMAIL]"
-            android:textAlignment="center" />
+    <TextView
+        android:id="@+id/labelPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="[PHONE]"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/switchStatus"
+        app:layout_constraintEnd_toStartOf="@+id/switchStatus"
+        app:layout_constraintStart_toEndOf="@+id/labelEmail"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/labelPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="[PHONE]"
-            android:textAlignment="center" />
+    <Switch
+        android:id="@+id/switchStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:switchPadding="0dp"
+        android:text="[STATUS]"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelPhone"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
-            android:id="@+id/switchStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:switchPadding="0dp"
-            android:text="[STATUS]"
-            android:textAlignment="center" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

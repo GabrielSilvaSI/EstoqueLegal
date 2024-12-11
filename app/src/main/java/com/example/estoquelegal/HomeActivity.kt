@@ -61,6 +61,14 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, TypesActivity::class.java)
             startActivity(intent)
         }
+        buttonSuppliers.setOnClickListener {
+            val intent = Intent(this, SuppliersActivity::class.java)
+            startActivity(intent)
+        }
+        buttonProducts.setOnClickListener {
+            val intent = Intent(this, ProductsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun signOut() {

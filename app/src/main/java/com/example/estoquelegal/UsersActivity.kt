@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.Switch
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +16,7 @@ class UsersActivity : AppCompatActivity() {
     private lateinit var buttonRegister: Button
     private lateinit var tableUsers: LinearLayout
     private lateinit var labelAmount: TextView
+    private lateinit var progressBar: ProgressBar
 
     companion object {
         const val REQUEST_CODE_CREATE_USER = 1
@@ -38,6 +40,7 @@ class UsersActivity : AppCompatActivity() {
 
         tableUsers = findViewById(R.id.tableUsers_Users)
         labelAmount = findViewById(R.id.labelAmount_Users)
+        progressBar = findViewById(R.id.progressBar_Users)
 
         updateTable()
     }
@@ -50,6 +53,8 @@ class UsersActivity : AppCompatActivity() {
     }
 
     private fun updateTable() {
+        progressBar.visibility = ProgressBar.VISIBLE
+        labelAmount.visibility = TextView.GONE
         UserController().getAllUsers { users, error ->
             if (users != null) {
                 tableUsers.removeAllViews()
@@ -65,6 +70,8 @@ class UsersActivity : AppCompatActivity() {
                 }
             }
             labelAmount.text = "Amount users: ${users?.count()}"
+            progressBar.visibility = ProgressBar.GONE
+            labelAmount.visibility = TextView.VISIBLE
         }
     }
 }

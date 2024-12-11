@@ -34,28 +34,6 @@ class UserController {
             }
     }
 
-    fun getUser(userId: String, callback: (User?, String?) -> Unit) {
-        database.child(userId).get().addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                val user = task.result.getValue(User::class.java)
-                callback(user, null)
-            } else {
-                callback(null, task.exception?.message)
-            }
-        }
-    }
-
-    fun updateUser(userId: String, user: User, callback: (Boolean, String?) -> Unit) {
-        database.child(userId).setValue(user)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    callback(true, null)
-                } else {
-                    callback(false, task.exception?.message)
-                }
-            }
-    }
-
     fun getAllUsers(callback: (List<User>?, String?) -> Unit) {
         database.get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
