@@ -29,7 +29,6 @@ class HomeActivity : AppCompatActivity() {
         verifyAuth(user)
 
         toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("💼 " + user?.email)
         toolbar.setOnMenuItemClickListener { item: MenuItem ->
             if (item.itemId == R.id.action_signout) {
                 val builder = AlertDialog.Builder(this)
@@ -69,6 +68,11 @@ class HomeActivity : AppCompatActivity() {
             val intent = Intent(this, ProductsActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        toolbar.setTitle("💼 " + auth.currentUser?.email)
     }
 
     private fun signOut() {
